@@ -1,0 +1,43 @@
+---
+import "@fontsource/poppins"; // Defaults to weight 400
+import "@fontsource/poppins/400.css"; // Specify weight
+import "@fontsource/poppins/400-italic.css"; // Specify weight and style
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style lang="scss">
+	/*
+	 *  Variables
+	 */
+
+	$primary-color: #000;
+	$secondary-color: #fff;
+	$tertiary-color: #ccc;
+
+	*, html, body, p {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		background-color: $primary-color;
+		color: $secondary-color;
+		font-family: "Poppins";
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+</style>
