@@ -2,13 +2,21 @@
 import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout>
-  <p>Hola Mundo, me esta gustando mucho Astro</p>
+<Layout title="Acerca de">
+  <p class="underline text-7xl p-5 m-5 bg-pink-500">Hola Mundo, <span>me esta <strong>gustando</strong> mucho</span> Astro</p>
 </Layout>
 
 <style lang="scss">
   p {
-    margin: 0;
-    padding: 0;
+
+    span {      
+      color: purple;
+
+      strong {
+        font-weight: lighter;
+        font-style: italic;
+
+      }
+    }
   }
 </style>
