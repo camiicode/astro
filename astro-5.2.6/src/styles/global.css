@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+.container {
+  width: 80%;
+  max-width: 1440px;
+  margin: auto;
+}
+.container-fluid {
+  width: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: auto;
+}
+.container-stretch {
+  width: 65%;
+  max-width: 1024px;
+  margin: auto;
+}

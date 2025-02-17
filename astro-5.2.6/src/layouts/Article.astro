@@ -8,8 +8,11 @@ import "@fontsource/poppins/400-italic.css"; // Specify weight and style
 import "../styles/global.css"
 
 // Components
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import Header     from "../components/Header.astro";
+import Jumbotron  from "../components/Jumbotron.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import Sidebar    from "../components/Sidebar.astro";
+import Footer     from "../components/Footer.astro";
 
 // Props
 export interface Props { title: string; }
@@ -28,14 +31,25 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<Header />
+    <Jumbotron />
+    <Breadcrumb />
 		<main>
-			<slot />
+      <section>
+        <article>
+          <slot />
+        </article>
+        <aside>
+          <Sidebar />
+        </aside>
+      </section>
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style lang="scss">
+  @import "../styles/main.scss";
+
 	*, body, html {
 		margin: 0;
 		padding: 0;
@@ -43,4 +57,28 @@ const { title } = Astro.props;
 		color-scheme: dark light;
 		font-family: "Poppins";
 	}
+
+  main {
+    width: 90%;
+    max-width: 96rem;
+    margin: 2rem auto;
+
+    section {
+      display: flex;
+      justify-content: space-between;
+      @extend .container-stretch;
+
+      article {
+        width: auto;
+        max-width: 60%;
+        gap: 10px;
+      }
+
+      aside {
+        width: 40%;
+        gap: 10px;
+        text-align: right;
+      }
+    }
+  }
 </style>

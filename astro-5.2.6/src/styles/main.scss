@@ -1,0 +1,18 @@
+// Colors
+$primary-color:   #91516b;
+$secondary-color: #86a2c2;
+$tertiary-color:  #E9E8E9;
+
+$dark-color:      #000000;
+$light-color:     #ffffff;
+$muted-color:     rgba(#000, .5);
+
+.container-stretch {
+  width: auto;
+  max-width: 80%;
+  margin: auto;
+}
+
+p {
+  text-transform: uppercase;
+}

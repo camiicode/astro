@@ -1,0 +1,128 @@
+---
+console.log("Hola Visualziadores de Headers")
+---
+
+<header class="w-screen">
+  <nav role="navigation" dir="ltr" class="container mx-auto">
+    <ul class="nav navbar-menu">
+      <li>
+        <a href="/">
+          <span>Inicio</span>
+        </a>
+      </li>
+      <li>
+        <a href="/about">
+          <span>Acerca de</span>
+        </a>
+      </li>
+      <li>
+        <a href="/projects">
+          <span>Mis Proyectos</span>
+        </a>
+      </li>
+      <li>
+        <a href="/blog">
+          <span>Blog</span>
+        </a>
+      </li>
+      <li>
+        <a href="/contact">
+          <span>Contactame</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-logo">
+      <li>
+        <a href="/">
+          <img class="w-25" src="../../public/brand/logo.png" alt="logo">
+        </a>
+      </li>
+    </ul>
+    <ul class="nav navbar-media">
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-codepen"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <div class="nav navbar-divider"></div>
+      </li>
+      <li>
+        <details>
+          <summary><img class="w-px-10" src="../../public/lang/es.webp" alt="español-language"></summary>
+          <a href="/en/"><img class="w-px-10" src="../../public/lang/en.webp" alt="english-language"></a>
+        </details>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style lang="scss">
+  header {
+
+    @import "../styles/main.scss";
+
+    display: block;
+    
+    nav {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+
+        &.navbar-menu { justify-content: flex-start; width: auto; }
+        &.navbar-logo { justify-content: center; width: auto; }
+        &.navbar-media { justify-content: flex-end; width: auto; li a { padding: 10px; }}
+
+        li {
+
+          .navbar-divider { width: 20px; }
+
+          a {
+            padding: 10px 20px;
+            transition: ease-in-out .3s all;
+
+            &:hover {
+              span, i, svg { 
+                color: $primary-color; 
+                transition: ease-in-out .3s all;
+                position: relative;
+              }
+            }
+          }
+
+          details[open] { height: auto; }
+
+          summary::marker { content: ""; }
+        }
+      }
+    }
+  }
+</style>

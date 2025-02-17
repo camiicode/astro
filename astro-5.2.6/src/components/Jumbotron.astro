@@ -1,0 +1,44 @@
+---
+console.log("Hola Lectores del Blog");
+---
+
+<section style="background-image: url(../../public/post/banner.jpg);">
+  <div class="container">
+    <h1>¿Css es un lenguaje de Programacion?</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim ipsa temporibus sed provident obcaecati molestiae, odio, sint atque, officiis sit nostrum eum illum et quas voluptatum libero dolores accusamus nemo?</p>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../styles/main.scss";
+
+  section {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .container {
+      text-align: center;
+      width: 50%;
+      color: $dark-color;
+
+      h1 { 
+        font-size: 3rem;
+        font-weight: bolder;
+        color: $primary-color;
+      }
+      p { 
+        text-transform: unset; 
+        color: $muted-color;
+        font-size: 1.5rem;
+      }
+    }
+  }
+</style>
